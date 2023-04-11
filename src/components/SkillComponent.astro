@@ -1,0 +1,118 @@
+---
+import '../styles/accordion.css'
+import SplineModel from './SplineModel'
+import '../styles/skills.css'
+import ContentSection from './content-section.astro';
+
+---
+
+<ContentSection title="Skills" id="features">
+   
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+    <div class="font-medium text-2xl inline-block gap 10">
+       
+        <div class="mb-3 text-xl">
+
+            <div class="relative h-64 rounded-lg overflow-hidden shadow-xl">
+                <img class="absolute inset-0 w-full h-full object-cover" src="https://images.pexels.com/photos/6016485/pexels-photo-6016485.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+                <div class="absolute inset-0 bg-zinc-900  bg-opacity-50 justify-items-center items-center text-center flex flex-col justify-center">
+                  <p class="border border-zinc-400 text-zinc-200 font-mplus font-extrabold w-64">Here is my skills to represent my expertise</p>
+                </div>
+              </div>
+
+            
+        </div>
+
+            <!-- <div class="w-full h-full">
+                <div class="relative h-48 rounded-lg overflow-hidden shadow-xl">
+                    <img class="absolute inset-0 w-full h-full object-cover" src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+                    <div class="absolute inset-0 bg-gray-800  bg-opacity-10"></div>
+                    </div>
+            </div> -->
+
+          
+
+            
+
+    </div>
+ 
+
+<div class="">
+
+<div class="skills">
+    <div class="skill-1">
+        <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect width="13" height="13" x=".5" y=".5" rx="1"/><path d="M.5 4h13m-9 3L3 8.5L4.5 10M10 7l1.5 1.5L10 10m-3.5.5L8 6"/></g></svg>
+        <h3 class="font-semibold">Backend <span class="bg-gradient-to-r from-teal-500 to-blue-500 text-transparent bg-clip-text">development</span></h3>
+        <svg class="arrow self-end ml-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.388-.075t-.312-.2l-4.6-4.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062Z"/></svg>
+    </div>
+    <div class="answer">
+        <p>.NET ecosytem, DevExpress, SQL Server, MVC 5, Entity Framework</p>
+    </div>
+
+    
+</div>
+
+
+<div class="skills">
+    <div class="skill-1">
+        <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect width="13" height="13" x=".5" y=".5" rx="1"/><path d="M.5 4h13m-9 3L3 8.5L4.5 10M10 7l1.5 1.5L10 10m-3.5.5L8 6"/></g></svg>
+        <h3 class="font-semibold">Frontend <span class="bg-gradient-to-r from-purple-800 to-blue-500 text-transparent bg-clip-text">development</span></h3>
+        <svg class="arrow self-end ml-auto " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.388-.075t-.312-.2l-4.6-4.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062Z"/></svg>
+    </div>
+    <div class="answer">
+        <p>.NET ecosytem, DevExpress, SQL Server, MVC 5, Entity Framework</p>
+    </div>
+
+    
+</div>
+
+
+
+<div class="skills">
+    <div class="skill-1">
+        <svg class="mr-3 fill-black dark:fill-white" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path  d="M20 6.147a4.973 4.973 0 0 0-.65-.107a7.492 7.492 0 0 0-14-2A5.904 5.904 0 0 0 4 4.365A5.98 5.98 0 0 0 4 15.65v-2.204a3.976 3.976 0 0 1 0-6.901a3.93 3.93 0 0 1 1.56-.515l1.07-.11l.5-.95a5.487 5.487 0 0 1 10.26 1.46l.3 1.5l1.53.11a2.913 2.913 0 0 1 .78.171a2.963 2.963 0 0 1 0 5.604v2.084a4.972 4.972 0 0 0 0-9.752Z"/><path d="M12 11c-3.818 0-6 .758-6 2.167v8.666C6 23.242 9.087 24 12 24s6-.758 6-2.167v-8.666C18 11.758 15.818 11 12 11Zm0 1c2.711 0 4.91.81 4.91 1.708s-2.2 1.625-4.91 1.625s-4.91-.727-4.91-1.625S9.29 12 12 12Zm-4.91 7.924v-1.143a12.026 12.026 0 0 0 4.91.886a12.026 12.026 0 0 0 4.91-.886v1.179a12.588 12.588 0 0 1-4.91.79a12.776 12.776 0 0 1-4.91-.826Z"/></svg>
+        <h3 class="font-semibold">Data <span class="bg-gradient-to-r from-pink-600 to-blue-400 text-transparent bg-clip-text">science</span></h3>
+        <svg class="arrow self-end ml-auto " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.388-.075t-.312-.2l-4.6-4.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062Z"/></svg>
+    </div>
+    <div class="answer">
+        <p>Python, Hadoop, Power BI, SQL Server, Spark</p>
+    </div>
+
+    
+</div>
+
+
+
+<div class="skills">
+    <div class="skill-1">
+        <svg class="mr-3 fill-black dark:fill-white" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48"><g stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M10 44h28a2 2 0 0 0 2-2V14H30V4H10a2 2 0 0 0-2 2v36a2 2 0 0 0 2 2ZM30 4l10 10"/><path d="M19.2 21h9.6l3.2 4.118L24 35l-8-9.882L19.2 21Z"/></g></svg>
+        <h3 class="font-semibold">Software <span class="bg-gradient-to-r from-red-500 to-blue-500 text-transparent bg-clip-text">QA</span></h3>
+        <svg class="arrow self-end ml-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.388-.075t-.312-.2l-4.6-4.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062Z"/></svg>
+    </div>
+    <div class="answer">
+        <p>Robot Framework, Junit, Jest, Supertest, NodeJS, pytest, Selenium</p>
+    </div>
+
+    
+</div>
+
+
+</div>
+</div>
+
+<script>
+    const skills=document.querySelectorAll(".skills");
+    skills.forEach((skills)=>{
+        skills.addEventListener("click", ()=>{
+            
+            skills.classList.toggle("active");
+
+            
+
+        })
+    });
+</script>
+
+</ContentSection>

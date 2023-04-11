@@ -1,0 +1,70 @@
+---
+import { Image } from '@astrojs/image/components'
+---
+
+<section>
+  <h2
+    class="font-mplus font-bold text-xl my-4 underline underline-offset-4 decoration-zinc-400 dark:decoration-zinc-700 decoration-4"
+  >
+    Created with
+  </h2>
+  <ul class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    
+    <li class="text-center mb-4">
+      <a href="https://es.reactjs.org/">
+        <Image
+          class="border border-slate-300 dark:border-zinc-700 rounded-xl"
+          src="https://knackforge.com/wp-content/uploads/2022/11/Benefits-of-ReactJS.jpg"
+          width={720 * 2}
+          height={650}
+          aspectRatio={2.0}
+          alt="AstroJS banner"
+        />
+
+        <div class="mt-3 text-xl">React</div>
+        <div class="opacity-70">
+          Framework used for building 
+          interactive user interfaces
+        </div>
+      </a>
+    </li>
+
+
+    <li class="text-center mb-4">
+      <a href="https://astro.build/">
+        <Image
+          class="border border-slate-300 dark:border-zinc-700 rounded-xl"
+          src="https://css-tricks.com/wp-content/uploads/2021/05/astro-homepage.png"
+          width={720 * 2}
+          height={650}
+          aspectRatio={2.0}
+          alt="AstroJS banner"
+        />
+
+        <div class="mt-3 text-xl">Astro</div>
+        <div class="opacity-70">
+          Framework for building fast static websites
+        </div>
+      </a>
+    </li>
+
+    <li class="text-center mb-4">
+      <a href="https://tailwindcss.com/">
+        <Image
+          class="border border-slate-300 dark:border-zinc-700 rounded-xl"
+          src="https://tailwindcss.com/_next/static/media/tailwindui-small@75.8bb955b2.jpg"
+          width={720 * 2}
+          height={650}
+          aspectRatio={2.0}
+          alt="AstroJS banner"
+        />
+
+        <div class="mt-3 text-xl">Tailwind CSS</div>
+        <div class="opacity-70">
+          A utility-first CSS framework packed
+        </div>
+      </a>
+    </li>
+
+  </ul>
+</section>

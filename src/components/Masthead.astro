@@ -1,0 +1,37 @@
+---
+import { baseService } from "astro/dist/assets";
+
+const isProd = import.meta.env.PROD
+const baseAssetUrl = isProd
+  ? 'https://drive.google.com/uc?export=download&id='
+  : ''
+---
+
+
+<section class="relative mb-4 h-96 flex justify-center items-center">
+  <div class="absolute w-full h-full overflow-hidden">
+    <video
+      class="absolute inset-0 min-w-full min-h-full object-cover opacity-30"
+      poster="https://codeberryschool.com/blog/wp-content/uploads/2020/12/lee-campbell-DtDlVpy-vvQ-unsplash-scaled.jpg"
+      autoplay="autoplay"
+      muted="muted"
+      loop="loop"
+      playsinline
+      ><source
+        src={'https://drive.google.com/uc?export=download&id=1-alVfzypOFnSC9tP9rgs9hS8LBzgJTQQ'}
+        type="video/mp4"
+      />
+      <source
+        src={'https://drive.google.com/uc?export=download&id=1Ya0SD7-qM13S-42i6F7wlG-Zy0UgOWsq'}
+        type="video/mp4"
+      />
+    </video>
+  </div>
+  <div class="welcome z-10 text-center px-8 drop-shadow-lg shadow-black">
+    <div class="uppercase text-sm mb-4">Welcome to my portfolio</div>
+    <div class="text-2xl font-medium ">
+      Hi, i'm Agustin Gustavo Amaya Soza 
+    </div>
+    <span class="bg-blue-600 text-transparent bg-clip-text dark:bg-gradient-to-r from-teal-500 to-blue-500 text-transparent bg-clip-text text-shadow-md font-mplus font-medium shadow-black">(Software developer/ QA analyst/ Data analyst)</span>
+  </div>
+</section>

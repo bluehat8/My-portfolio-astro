@@ -1,0 +1,197 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { SITE_TITLE, SITE_DESCRIPTION, HOMEPAGE_URL } from '../config'
+import Body from '../components/Body.astro'
+import Content from '../components/Content.astro'
+import Masthead from '../components/Masthead.astro'
+import { Image } from '@astrojs/image/components'
+import CreatedWithSection from '../components/CreatedWithSection.astro'
+import Spline from '@splinetool/react-spline';
+import SplineComponent from '../components/SplineComponent.astro'
+import SkillCard from '../components/SkillCard.astro'
+import SkillSection from '../components/SkillSection.astro'
+import SkillComponent from '../components/SkillComponent.astro'
+import PortfolioSection from '../components/PortfolioSection.astro'
+// import SplineModel from '../components/SplineModel'
+
+
+const posts = (await Astro.glob('./posts/*.md')).sort(
+   (a: any, b: any) =>
+     new Date(b.frontmatter.createdAt).valueOf() -
+     new Date(a.frontmatter.createdAt).valueOf()
+ )
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <script src="https://unpkg.com/scrollreveal@4.0.7/dist/scrollreveal.min.js"></script>
+
+  </head>
+  <Body>
+    <Header title={SITE_TITLE} />
+    <main class="pt-[56px]">
+      <Masthead />
+      <Content>
+        <section id="about-me" class="about-me mt-20">
+          <h2  
+          class="font-mplus font-bold text-xl my-4 underline underline-offset-4 decoration-zinc-400 dark:decoration-zinc-500 decoration-4"
+        >
+          About me
+        </h2>
+          <p class="mb-8 my-7">
+            I am a fifth-year student of Systems Engineering with experience in 
+            Microsoft .NET, React, NodeJS, Python technologies and SQL Server and MySQL
+            databases. I am passionate about user interface design and application development
+             for both web and desktop. I recently participated in the 2022 Latin American Innovation 
+             Rally and was certified for my participation at the UNI - RUPAP headquarters in Nicaragua. 
+             Additionally, I have worked as a software quality control analyst at Grupo TX. 
+             As a technology enthusiast, I always strive to improve my skills and learn new technologies 
+             to face new challenges.
+            <a
+              class="inline-flex items-center gap-1 indent-1 text-teal-500"
+              href={HOMEPAGE_URL}
+              >Learn more about me in linkedin <i class="gg-arrow-bottom-right-r"></i>
+            </a>
+          </p>
+        </section>
+
+
+
+
+         <section id="skills-section" class="skills-section">
+          <SkillComponent/>
+         </section>
+
+
+       <section id="my-works" class="">
+        <h2  
+        class="my-works font-mplus font-bold text-xl my-4 underline underline-offset-4 decoration-zinc-400 dark:decoration-zinc-500 decoration-4 mt-8">
+        My works
+        </h2>
+
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {
+            posts.map(post => (
+              <li class="mapPortfolio text-center mb-4 ">
+
+              
+                <a href={post.url}>
+
+
+            <div class="relative h-64 rounded-lg overflow-hidden shadow-xl ">
+
+              
+              <Image
+              class="absolute inset-0 w-full h-full object-cover border border-slate-300 dark:border-zinc-700 rounded-xl pointer-events-none z-10 hover:scale-105 transition duration-500"
+                    src={post.frontmatter.heroImage}
+                    width={720 * 2}
+                    aspectRatio={2.0}
+                    alt="Thumbnail"/>
+              <div class="absolute inset-0 bg-gray-800 bg-opacity-10"></div>
+              <div class="relative px-6 py-4">
+
+                <div class=" grid grid-cols-3 gap-5 justify-items-center items-center text-slate-300	">
+                  <div class="flex items-center absolute right-4 top-4 z-10">
+    
+     
+    <a
+      href=""
+      class="text-white p-3 bg-black/50 rounded-full backdrop-blur-md"
+      aria-label="Social Media"
+      target="_blank"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-github"
+      >
+        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+      </svg>
+    </a>
+  
+
+
+
+  
+    <a
+      href=""
+      class="text-white p-3 bg-black/50 rounded-full backdrop-blur-md ml-1"
+      aria-label="Social Media"
+      target="_blank"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-link-2"
+      >
+        <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3" />
+        <line x1="8" y1="12" x2="16" y2="12" />
+      </svg>
+    </a>
+  
+
+</div>
+
+
+                
+              
+                </div>   
+              </div>
+            </div>
+
+
+                  
+                
+
+                  
+                  <div class="mt-3 text-xl font-bold ">
+                    {post.frontmatter.title}
+                  </div>
+                  {post.frontmatter.description && (
+                    <div class="opacity-70">
+                      {post.frontmatter.description}
+                    </div>
+                  )}
+                </a>
+              </li>
+            ))
+          }
+
+          
+        </ul> 
+        <!-- <SkillCard></SkillCard> -->
+
+        
+        <!-- <PortfolioSection/> -->
+
+
+       </section>
+
+       <section class="created">
+        <CreatedWithSection />
+      </section>
+      </Content>
+    </main>
+    <Footer />
+
+    
+  </Body>
+</html>

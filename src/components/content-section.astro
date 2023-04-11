@@ -1,0 +1,26 @@
+---
+export interface Props {
+  id: string;
+  title: string;
+}
+const { title, id } = Astro.props;
+---
+
+<section
+  id={id}
+  class="flex-col gap-4 space-y-5"
+>
+  <div class="flex flex-col gap-4">
+    <slot name="eyebrow" />
+
+    
+    <h2  
+          class="font-mplus font-bold text-xl my-4 underline underline-offset-4 decoration-zinc-400 dark:decoration-zinc-500 decoration-4 mt-8">
+          {title}
+          </h2>
+  </div>
+  <p class="max-w-xl  font-semibold text-2xl">
+    <slot name="lead" />
+  </p>
+  <slot />
+</section>

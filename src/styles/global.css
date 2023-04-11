@@ -1,0 +1,87 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+ @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;500;700&display=swap");
+
+
+:root {
+  /* Valores predeterminados de las variables CSS */
+  --color-text: #333;
+  --color-background: #fff;
+
+
+  --gray-color:  #808080; 
+  --black-background2:#0e0e10;
+  --black-background3:#23233B;
+
+  --black-background:#020200; 
+  --green-color: #4dc4be;
+  --dark-green-color: #008498;
+  --white-color: #ffff;
+  --red-color: #ee436d;
+
+  --green-color2: #00E0AB;
+}
+
+/* Estilos para el tema light */
+:root:not(.dark) {
+  --color-text: #333;
+  --color-background: #fff;
+}
+
+/* Estilos para el tema dark */
+:root.dark {
+  --color-text: #fff;
+  --color-background: #333;
+}
+
+ body {
+  font-family: 'Montserrat', sans-serif;
+   -webkit-font-smoothing: antialiased;
+   text-rendering: optimizeLegibility;
+   overflow-wrap: break-word;
+   overflow-x: hidden;
+ }
+
+ .spline-container {
+  width: 10rem;
+  height: 10rem;
+}
+
+ body::-webkit-scrollbar {
+  width: 11px;         
+  transition:  1s ease-in-out;
+
+}
+
+body::-webkit-scrollbar-track {
+ 
+  transition:  1s ease-in-out;
+
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--gray-color);   /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  height: 50px;
+ /* border: 2px solid var(--black-background);*/ /* creates padding around scroll thumb */
+  transition:  1s ease-in-out;
+
+}
+
+
+body::-webkit-scrollbar-thumb:hover {
+  /*background: #00E676;   */ /* color of the scroll thumb */
+  background:linear-gradient(278.93deg, #00E0AB -34.41%, #006EA3 114.58%);
+}
+
+.theme-toggle-green-color {
+  color: #00E0AB;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+

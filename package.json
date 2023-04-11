@@ -1,0 +1,44 @@
+{
+  "name": "puffy-pointastro-portfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/deno": "^4.1.0",
+    "@astrojs/image": "^0.16.1",
+    "@astrojs/preact": "^2.1.0",
+    "@astrojs/react": "^2.1.1",
+    "@astrojs/rss": "^2.3.1",
+    "@astrojs/sitemap": "^1.2.1",
+    "@astrojs/tailwind": "^3.1.1",
+    "@headlessui/react": "^1.7.13",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.280",
+    "astro": "^2.1.5",
+    "install": "^0.13.0",
+    "preact": "^10.13.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "scrollreveal": "^4.0.9",
+    "sharp": "^0.31.3",
+    "tailwindcss": "^3.3.1",
+    "three": "^0.151.3",
+    "three-gltf-loader": "^1.111.0"
+  },
+  "devDependencies": {
+    "@inkdropapp/live-export": "^0.1.8",
+    "@types/react": "^18.0.28",
+    "@typescript-eslint/parser": "^5.56.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.36.0",
+    "eslint-plugin-astro": "^0.26.1",
+    "rehype-add-classes": "^1.0.0"
+  }
+}
