@@ -11,10 +11,7 @@ import addClasses from 'rehype-add-classes'
 
 export default defineConfig({
   output: 'server',
-  adapter: deno({
-    port: 8081,
-    hostname: 'myhost'
-  }),
+  
   integrations: [tailwind(), preact(),sitemap(),
     react(),
     image({
