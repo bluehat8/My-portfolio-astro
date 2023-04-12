@@ -10,7 +10,6 @@ import addClasses from 'rehype-add-classes'
 
 
 export default defineConfig({
-  output: 'server',
   
   integrations: [tailwind(), preact(),sitemap(),
     react(),
