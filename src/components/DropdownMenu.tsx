@@ -11,10 +11,10 @@ interface Props {
 export default function DropdownMenu({ tags }: Props) {
 
   const menuItems = [
-    { label: 'About', href: '/about' },
-    { label: 'Skills', href: '/skills' },
-    { label: 'My works', href: ''},
-    { label: 'Source', href: '/source' },
+    { label: 'About', href: '#about-me' },
+    { label: 'Skills', href: '#skills-section' },
+    { label: 'My works', href: '#my-works'},
+    { label: 'Source', href: 'https://github.com/bluehat8/My-portfolio-astro' },
     // ...tags.map(tag => ({ label: tag, href: `/categories/${tag.toLowerCase()}` }))
   ];
 
