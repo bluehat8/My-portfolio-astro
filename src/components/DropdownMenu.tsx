@@ -9,8 +9,18 @@ interface Props {
 }
 
 export default function DropdownMenu({ tags }: Props) {
+
+  const menuItems = [
+    { label: 'About', href: '/about' },
+    { label: 'Skills', href: '/skills' },
+    { label: 'My works', href: ''},
+    { label: 'Source', href: '/source' },
+    // ...tags.map(tag => ({ label: tag, href: `/categories/${tag.toLowerCase()}` }))
+  ];
+
+
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu as="div" className="inline-block relative text-left md:hidden">
       <div>
         <Menu.Button
           className="inline-flex justify-center rounded-md border border-zinc-400 dark:border-zinc-700 px-2 py-2 text-sm font-medium shadow-sm hover:bg-zinc-300 dark:hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100 transition-all"
@@ -32,9 +42,9 @@ export default function DropdownMenu({ tags }: Props) {
          <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md border border-zinc-400 dark:border-zinc-700 bg-orange-50 dark:bg-zinc-800 shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none divide-zinc-400 dark:divide-zinc-700">
           <div className="py-1">
             <div className="px-3 py-2 uppercase font-bold text-xs">
-              Categories
+             Menu
             </div>
-            {tags.map(tag => {
+            {/* {menuItems.map(tag => {
               return (
                 <DropdownMenuItem
                   key={tag}
@@ -43,7 +53,15 @@ export default function DropdownMenu({ tags }: Props) {
                   {tag}
                 </DropdownMenuItem>
               )
-            })}
+            })} */}
+
+              {menuItems.map(item => {
+                  return (
+                    <DropdownMenuItem key={item.label} href={item.href}>
+                      {item.label}
+                    </DropdownMenuItem>
+                  )
+                })}
           </div>
         </Menu.Items> 
       </Transition>
