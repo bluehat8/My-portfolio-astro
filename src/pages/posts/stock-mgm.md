@@ -13,6 +13,6 @@ slug: stock-mgm
 ---
 
 
-[Git Code](https://amzn.to/2LSw1Mb).
+[Git Code](https://github.com/bluehat8/Software-de-Producci-n).
 
 <!-- ![blue-yeti-usb-microphone_2.jpeg](/posts/blue-yeti_blue-yeti-usb-microphone-2-jpeg.jpg) -->
